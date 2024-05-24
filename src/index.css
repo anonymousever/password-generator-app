@@ -4,9 +4,19 @@
 
 body {
   font-family: 'JetBrains Mono', monospace;
+  text-align: center;
   min-block-size: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #e6e5ea;
   background: linear-gradient(to bottom, #14131b, #08070b);
+}
+
+.custom-container {
+  inline-size: min(90vw, 22.5rem);
+  margin-inline: auto;
 }
 
 .slider {
