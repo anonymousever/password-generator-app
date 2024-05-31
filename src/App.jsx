@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { generatePassword } from './utils/generator'
 import Display from './components/Display'
+import Options from './components/Options'
 
 function App() {
   const [password, setPassword] = useState('')
 
   const handleSubmit = (length, options) => {
-    // TODO: Error handling
+    if (Object.values(options).every(option => !option) || !length) return
     const generatedPassword = generatePassword(length, options)
     setPassword(generatedPassword)
   }
@@ -20,6 +21,7 @@ function App() {
       </div>
       <div>
         <Display password={password} />
+        <Options password={password} generatePassword={handleSubmit} />
       </div>
     </main>
   )

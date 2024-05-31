@@ -8,6 +8,10 @@ function Display({ password }) {
     if (!password) return
     navigator.clipboard.writeText(password)
     setIsCopied(true)
+
+    setTimeout(() => {
+      setIsCopied(false)
+    }, 1000)
   }
 
   useEffect(() => {
