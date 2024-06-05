@@ -1,4 +1,4 @@
-import dictionary from './dictionary'
+import { dictionary } from './dictionary'
 
 export function generatePassword(length, options) {
   const characters = Object.entries(options)

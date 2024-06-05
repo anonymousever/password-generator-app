@@ -14,6 +14,7 @@ function Options({ password, generatePassword }) {
 
   useEffect(() => {
     if (!password) return
+
     const lengthPoints = Math.floor(length / 2)
     const optionsPoints = Object.values(options).filter(Boolean).length / 2
     const totalPoint = lengthPoints + optionsPoints
@@ -47,8 +48,8 @@ function Options({ password, generatePassword }) {
     >
       <div className="flex flex-col gap-2 md:gap-4">
         <label htmlFor="length" className="flex justify-between items-center">
-          <span className="capitalize">Character length</span>
-          <span className="text-neon-green">{length}</span>
+          <span className="font-semibold capitalize">Character length</span>
+          <span className="text-2xl font-black text-neon-green">{length}</span>
         </label>
         <input
           type="range"
@@ -56,7 +57,7 @@ function Options({ password, generatePassword }) {
           id="length"
           min={0}
           max={20}
-          className="slider"
+          className="focus focus:outline-offset-[15px] slider"
           value={length}
           onChange={event => setLength(Number(event.target.value))}
           style={{ '--value': `${(length / 20) * 100 - length / 20}%` }}
@@ -74,14 +75,16 @@ function Options({ password, generatePassword }) {
               className="size-5 appearance-none border-2 bg-no-repeat bg-center cursor-pointer transition-colors checked:bg-check 
               checked:border-neon-green checked:bg-neon-green"
             />
-            <label htmlFor={`${id}-${checkbox.name}`}>{checkbox.label}</label>
+            <label htmlFor={`${id}-${checkbox.name}`} className="font-semibold">
+              {checkbox.label}
+            </label>
           </div>
         ))}
       </div>
       <div className="flex flex-col gap-4 md:gap-8">
         <div className="flex items-center gap-4 px-4 py-[0.875rem] bg-very-dark-gray md:px-8 md:py-5">
-          <p className="capitalize text-gray">Strength</p>
-          <p className="ml-auto">
+          <p className="font-semibold uppercase text-gray">Strength</p>
+          <p className="font-semibold uppercase ml-auto">
             {currentStrength ? currentStrength.name : ''}
           </p>
           <div className="flex gap-2">
@@ -97,7 +100,7 @@ function Options({ password, generatePassword }) {
         </div>
         <button
           disabled={Object.values(options).every(value => !value) || !length}
-          className="flex justify-center items-center gap-4 px-4 py-[1.125rem] uppercase transition-colors border-2 border-neon-green bg-neon-green 
+          className="font-semibold flex justify-center items-center gap-4 px-4 py-[1.125rem] uppercase transition-colors border-2 border-neon-green bg-neon-green 
           text-dark-gray md:py-5 hover:bg-transparent hover:text-neon-green disabled:cursor-not-allowed disabled:hover:bg-neon-green disabled:text-dark-gray"
         >
           <span>Generate</span>

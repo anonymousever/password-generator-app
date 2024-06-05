@@ -6,6 +6,7 @@ function Display({ password }) {
 
   const handleCopy = () => {
     if (!password) return
+
     navigator.clipboard.writeText(password)
     setIsCopied(true)
 
@@ -29,14 +30,17 @@ function Display({ password }) {
       </p>
       <div className="flex items-center gap-4">
         {isCopied && (
-          <small className="uppercase text-neon-green">Copied</small>
+          <small className="font-semibold uppercase text-neon-green">
+            Copied
+          </small>
         )}
         <button
           type="button"
           aria-label="Copy to clipboard"
           disabled={!password}
           onClick={handleCopy}
-          className="text-neon-green transition-colors hover:text-white disabled:hover:text-neon-green disabled:hover:cursor-not-allowed"
+          className="text-neon-green transition-colors focus:outline focus:outline-offset-4 hover:text-white 
+          disabled:hover:text-neon-green disabled:hover:cursor-not-allowed"
         >
           <Copy />
         </button>

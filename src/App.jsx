@@ -8,6 +8,7 @@ function App() {
 
   const handleSubmit = (length, options) => {
     if (Object.values(options).every(option => !option) || !length) return
+
     const generatedPassword = generatePassword(length, options)
     setPassword(generatedPassword)
   }
