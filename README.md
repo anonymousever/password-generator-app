@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is my first try of Frontend Mentor challenges, covered by React as a UI library. We have two main features for this app. The Length and Options that are evaluated by Strength feature. The styling is covered by Tailwind and a little CSS for custom range input. JavaScript is the main language instead of TypeScript, because we don't have any specific features that are mixed with TypeScript.
+Recently I decided to try some of the interesting Frontend Mentor challenges to improve my skills and create some fun moments. For the first challenge I picked a password generator app as an intermediate one. One or two years ago I completed the same challenge with vanilla javascript, so I have a basic understanding of the main process. This time I tried to focus on that with React as a UI library in a declarative way. The main features are the same as other similar apps, but the strength property is a tricky one that I saw less in other ones.
 
 ### Links
 
@@ -18,7 +18,7 @@ This is my first try of Frontend Mentor challenges, covered by React as a UI lib
 
 ### What I learned
 
-I had an understanding of main functionality but in a different way that was simpler but not performant. The new solution satisfies my mindset about password generator. It's not advanced but I think it is way better than my previous solution I had in my mind. So I learned an effective solution alongside with very useful tips about JavaScript itself.
+I had an understanding of main functionality but in a different way that was simpler but not efficient for these days. If I want to highlight a specific point about the challenge’s solution and what I learned from that, I should talk about config or data folder that acts as a starting point or even a guideline for reminder parts. This part of code shaped other parts in an easy and efficient way with minimum actions. For me this is an important part that I learned a lot. After this specific part, I learned how to deal with password strength and how to understand that as a tricky part. And in the last part, learning very useful tips about vanilla javascript itself and reviewing them is very helpful.
 
 ## Acknowledgments
 
